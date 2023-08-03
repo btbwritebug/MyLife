@@ -11,27 +11,24 @@
     <groupId>com.btb</groupId>
     <artifactId>MyLife</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>MyLife</name>
-    <description>MyLife</description>
+
     <properties>
         <java.version>8</java.version>
     </properties>
+
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--<dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>3.0.0</version>
-        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -67,7 +64,7 @@
         <dependency>
             <groupId>org.eclipse.jgit</groupId>
             <artifactId>org.eclipse.jgit</artifactId>
-            <version>5.13.0.202109080827-r</version>
+            <version>5.7.0.202003110725-r</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.gitlab/java-gitlab-api -->
@@ -77,12 +74,48 @@
             <version>4.1.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/cn.hutool/hutool-all -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.8.12</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.gitlab4j/gitlab4j-api -->
+        <dependency>
+            <groupId>org.gitlab4j</groupId>
+            <artifactId>gitlab4j-api</artifactId>
+            <version>5.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.55</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.jgit</groupId>
+            <artifactId>org.eclipse.jgit.ssh.jsch</artifactId>
+            <version>5.13.0.202109080827-r</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/pl.allegro.tech.build/axion-release-plugin -->
+        <dependency>
+            <groupId>pl.allegro.tech.build</groupId>
+            <artifactId>axion-release-plugin</artifactId>
+            <version>1.8.1</version>
+        </dependency>
+
+
+            <!-- AspectJ runtime library -->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>1.9.7</version> <!-- 使用最新版本或者适合你的版本 -->
+            </dependency>
+            <!-- 其他依赖项 -->
+
+
     </dependencies>
 
     <build>
@@ -117,6 +150,22 @@
                         <version>5.1.49</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+                <version>1.14.0</version> <!-- 使用最新版本或者适合你的版本 -->
+                <configuration>
+                    <!-- 配置编译参数，例如源代码目录和目标类目录 -->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

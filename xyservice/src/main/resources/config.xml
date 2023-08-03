@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- 以win开头的属性，为windows服务系统下的值 -->
+    <!-- openoffice服务安装路径  -->
+    <officehome value="/opt/openoffice4" winValue="C:\\office2swf\\office2swf\\" />
+
+    <!-- openoffice服务端口 -->
+    <officeports value="8100,8101,8102,8103,8104,8105" />
+
+    <!-- 源文档存放目录  -->
+    <fileroot value="/opt/test" winValue="d:\\temp\\office2swf" />
+
+    <!-- pdf存放目录 -->
+    <pdfdir value="/opt/test/pdf" winValue="D:\\test\\pdf" />
+
+    <!-- swf存放目录 -->
+    <swfdir value="/opt/test/swfs" winValue="D:\\test\\swf" />
+
+    <!-- swfTools在系统下的启动脚本路径 -->
+    <swfcommand value="/bin/sh" winValue="cmd" />
+
+    <!-- swfTools服务安装路径  -->
+    <swfhome value="/usr/swftools/bin" winValue="C:\\office2swf\\SWFTools" />
+
+    <!-- 字体包安装目录  -->
+    <swflanguagedir value="/usr/share/xpdf/xpdf-chinese-simplified"
+                    winValue="C:\\office2swf\\xpdf\\chinese-simplified" />
+
+    <!-- flash版本 -->
+    <flashversion value="9" />
+</config>
